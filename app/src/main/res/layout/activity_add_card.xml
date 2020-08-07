@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCardActivity">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar">
+        <ImageView android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+            android:tint="#000"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:id="@+id/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Add Card"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:padding="15dp"
+        android:id="@+id/cl_detail">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Card Number"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:id="@+id/txtCreditCardNumberLabel"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/txtCreditCardNumberLabel"
+            android:background="@drawable/edt_bg"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:hint="Enter number"
+            android:textSize="16sp"
+            android:id="@+id/edtCreditCardNumber"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="16"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/edtCreditCardNumber"
+            android:layout_marginTop="10dp"
+            android:id="@+id/lnrDateCvc">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="Expire Date"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/txtExpirationDateLabel"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtCreditCardNumberLabel"
+                    android:background="@drawable/edt_bg"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="MM/YY"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edtExpirationDate"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="CVV"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/txtCvcLabel"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtCreditCardNumberLabel"
+                    android:background="@drawable/edt_bg"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="Enter code"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edtCvc"
+                    android:singleLine="true"
+                    android:maxLength="3"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/lnrDateCvc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Name on Card"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:id="@+id/txtOwnerNameLabel"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/txtOwnerNameLabel"
+            android:background="@drawable/edt_bg"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:hint="Enter name"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:id="@+id/edtOwnerName"
+            android:textColor="@color/black"/>
+
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_selector"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/edtOwnerName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
