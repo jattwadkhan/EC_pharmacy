@@ -1,4 +1,4 @@
-package com.covid19Delivery;
+package com.ecPharmacy;
 
 import org.junit.Test;
 

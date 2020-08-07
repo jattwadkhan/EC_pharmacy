@@ -1,4 +1,4 @@
-package com.covid19Delivery;
+package com.ecPharmacy;
 
 import androidx.appcompat.app.AppCompatActivity;
 

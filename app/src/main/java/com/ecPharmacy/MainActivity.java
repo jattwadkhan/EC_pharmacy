@@ -1,9 +1,11 @@
-package com.covid19Delivery;
+package com.ecPharmacy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent intent;
+                    if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+                        intent = new Intent(MainActivity.this, HomeActivity.class);
+                    } else {
+                        intent = new Intent(MainActivity.this, LoginActivity.class);
+                    }
                     startActivity(intent);
                     finish();
                 }

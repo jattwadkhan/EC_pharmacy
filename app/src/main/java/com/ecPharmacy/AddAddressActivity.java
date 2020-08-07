@@ -1,4 +1,4 @@
-package com.covid19Delivery;
+package com.ecPharmacy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class AddCardActivity extends AppCompatActivity {
+public class AddAddressActivity extends AppCompatActivity {
 
     Button btnSave;
     ImageView back;
@@ -16,7 +16,7 @@ public class AddCardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_card);
+        setContentView(R.layout.activity_add_address);
 
         btnSave = findViewById(R.id.btnSave);
         back = findViewById(R.id.back);
@@ -24,7 +24,7 @@ public class AddCardActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddCardActivity.this, RatingActivity.class);
+                Intent intent = new Intent(AddAddressActivity.this, AddCardActivity.class);
                 startActivity(intent);
             }
         });

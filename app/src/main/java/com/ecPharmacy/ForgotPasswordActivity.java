@@ -1,29 +1,28 @@
-package com.covid19Delivery;
+package com.ecPharmacy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class ForgotPasswordActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView back;
-    Button btnRegister;
+    Button btnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_forgot_password);
 
         back = findViewById(R.id.back);
-        btnRegister = findViewById(R.id.btnSubmit);
+        btnSubmit = findViewById(R.id.btnSubmit);
 
         back.setOnClickListener(this);
-        btnRegister.setOnClickListener(this);
+        btnSubmit.setOnClickListener(this);
     }
 
     @Override
@@ -34,10 +33,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.btnSubmit:
-                Intent intent = new Intent(this, HomeActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
+                Toast.makeText(this, "Password send in your email", Toast.LENGTH_SHORT).show();
+                onBackPressed();
                 break;
         }
     }

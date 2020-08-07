@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.covid19Delivery">
+    package="com.ecPharmacy">
 
     <application
         android:allowBackup="true"
@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RatingActivity"></activity>
-        <activity android:name=".AddCardActivity" />
-        <activity android:name=".AddAddressActivity" />
-        <activity android:name=".CartActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ecPharmacy.RatingActivity"></activity>
+        <activity android:name="com.ecPharmacy.AddCardActivity" />
+        <activity android:name="com.ecPharmacy.AddAddressActivity" />
+        <activity android:name="com.ecPharmacy.CartActivity" />
+        <activity android:name="com.ecPharmacy.HomeActivity" />
+        <activity android:name="com.ecPharmacy.ForgotPasswordActivity" />
+        <activity android:name="com.ecPharmacy.RegisterActivity" />
+        <activity android:name="com.ecPharmacy.LoginActivity" />
+        <activity android:name="com.ecPharmacy.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

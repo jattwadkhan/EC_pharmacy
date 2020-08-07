@@ -1,4 +1,4 @@
-package com.covid19Delivery;
+package com.ecPharmacy;
 
 import android.content.Context;
 import android.view.LayoutInflater;

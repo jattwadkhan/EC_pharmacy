@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1002881489734",
+    "firebase_url": "https://ec-pharmacy.firebaseio.com",
+    "project_id": "ec-pharmacy",
+    "storage_bucket": "ec-pharmacy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002881489734:android:7c9d7686817cd2d33fe347",
+        "android_client_info": {
+          "package_name": "com.ecPharmacy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002881489734-uss0sifecuj17jbmjhbbebkmc4buchbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ecPharmacy",
+            "certificate_hash": "d5d607fe240a1b5ea3e05fdc48eed3cbc73c5524"
+          }
+        },
+        {
+          "client_id": "1002881489734-dgfdcfhorc6l9eqh68f089f7u533b5es.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSVy-7yLs0i2_r1YneDzhMGSgfgf6wMfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002881489734-dgfdcfhorc6l9eqh68f089f7u533b5es.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

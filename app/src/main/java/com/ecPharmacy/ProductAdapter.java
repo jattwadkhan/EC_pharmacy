@@ -1,4 +1,4 @@
-package com.covid19Delivery;
+package com.ecPharmacy;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,10 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
