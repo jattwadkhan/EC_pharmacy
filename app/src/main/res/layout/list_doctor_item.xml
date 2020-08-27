@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/edt_bg"
+    android:padding="10dp"
+    android:layout_margin="5dp">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgDoctor"
+        android:src="@drawable/cardiologist"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:id="@+id/txtDoctorName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Specialist"
+            android:textSize="17sp"
+            android:textColor="@color/grey"
+            android:gravity="center"
+            android:id="@+id/txtDoctorSpecialist"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/location"
+            android:drawableLeft="@drawable/location"
+            android:drawablePadding="3dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/txtDoctorLocation"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience: 5 year"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:id="@+id/txtExperience"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admission Fee : $50"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:id="@+id/txtAdmissionFee"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

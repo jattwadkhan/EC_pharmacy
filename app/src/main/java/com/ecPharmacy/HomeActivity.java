@@ -77,6 +77,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
                 break;
 
+            case R.id.nav_doctor:
+                cart.setVisibility(View.GONE);
+                title.setText("Doctor");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new DoctorTypeFragment()).commit();
+
+                break;
+
+            case R.id.nav_booking:
+                cart.setVisibility(View.GONE);
+                title.setText("Booking");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new BookingFragment()).commit();
+
+                break;
+
             case R.id.nav_not:
                 cart.setVisibility(View.GONE);
                 title.setText("Notification");

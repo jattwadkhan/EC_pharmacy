@@ -71,10 +71,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 } else {
                     loginApi();
                 }
-
-                intent = new Intent(this, HomeActivity.class);
-                startActivity(intent);
-                finish();
                 break;
 
             case R.id.txtForgot:
@@ -99,15 +95,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mFirebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull final Task<AuthResult> task) {
+                mDialog.dismiss();
                 if(!task.isSuccessful()){
-                    Toast.makeText(LoginActivity.this, "Login Error, Please Login Again",Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(LoginActivity.this, "Email/password is incorrect",Toast.LENGTH_SHORT).show();
                 }
                 else  {
-                    mDialog.dismiss();
-                    Intent inToHome = new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(inToHome);
-                    finish();
+                    if (task.getResult().getUser() == null) {
+                        Toast.makeText(LoginActivity.this, "Email/password is incorrect",Toast.LENGTH_SHORT).show();
+                    } else {
 
+                        Intent inToHome = new Intent(LoginActivity.this, HomeActivity.class);
+                        startActivity(inToHome);
+                        finish();
+                    }
                 }
             }
         });

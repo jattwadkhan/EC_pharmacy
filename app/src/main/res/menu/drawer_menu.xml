@@ -14,6 +14,16 @@
             android:title="Profile" />
 
         <item
+            android:id="@+id/nav_doctor"
+            android:icon="@drawable/ic_doctor"
+            android:title="List of Doctor" />
+
+        <item
+            android:id="@+id/nav_booking"
+            android:icon="@drawable/ic_booking"
+            android:title="Booking" />
+
+        <item
             android:id="@+id/nav_not"
             android:icon="@drawable/ic_noti"
             android:title="Notification" />
